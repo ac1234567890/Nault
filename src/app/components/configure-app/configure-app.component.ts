@@ -156,7 +156,7 @@ export class ConfigureAppComponent implements OnInit {
 
   // prefixOptions = [
   //   { name: 'xrb_', value: 'xrb' },
-  //   { name: 'nano_', value: 'nano' },
+  //   { name: 'co2c_', value: 'nano' },
   // ];
   // selectedPrefix = this.prefixOptions[0].value;
 

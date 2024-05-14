@@ -1032,7 +1032,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     const defaultRepresentative = this.settings.settings.defaultRepresentative || this.nanoBlock.getRandomRepresentative();
     const representative = from.representative || defaultRepresentative;
     const blockData = {
-      account: this.accountID.replace('xrb_', 'nano_').toLowerCase(),
+      account: this.accountID.replace('xrb_', 'co2c_').toLowerCase(),
       previous: from.frontier,
       representative: representative,
       balance: remainingDecimal,
@@ -1053,7 +1053,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     if (!('contents' in previousBlockInfo)) return this.notifications.sendError(`Previous block not found`);
     const jsonBlock = JSON.parse(previousBlockInfo.contents);
     const blockDataPrevious = {
-      account: jsonBlock.account.replace('xrb_', 'nano_').toLowerCase(),
+      account: jsonBlock.account.replace('xrb_', 'co2c_').toLowerCase(),
       previous: jsonBlock.previous,
       representative: jsonBlock.representative,
       balance: jsonBlock.balance,
@@ -1090,7 +1090,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     const newBalanceDecimal = newBalance.toString(10);
 
     const blockData = {
-      account: this.accountID.replace('xrb_', 'nano_').toLowerCase(),
+      account: this.accountID.replace('xrb_', 'co2c_').toLowerCase(),
       previous: previousBlock,
       representative: representative,
       balance: newBalanceDecimal,
@@ -1114,7 +1114,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
       if (!('contents' in previousBlockInfo)) return this.notifications.sendError(`Previous block not found`);
       const jsonBlock = JSON.parse(previousBlockInfo.contents);
       blockDataPrevious = {
-        account: jsonBlock.account.replace('xrb_', 'nano_').toLowerCase(),
+        account: jsonBlock.account.replace('xrb_', 'co2c_').toLowerCase(),
         previous: jsonBlock.previous,
         representative: jsonBlock.representative,
         balance: jsonBlock.balance,
@@ -1155,7 +1155,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     const balance = new BigNumber(account.balance);
     const balanceDecimal = balance.toString(10);
     const blockData = {
-      account: this.accountID.replace('xrb_', 'nano_').toLowerCase(),
+      account: this.accountID.replace('xrb_', 'co2c_').toLowerCase(),
       previous: account.frontier,
       representative: this.representativeModel,
       balance: balanceDecimal,
@@ -1178,7 +1178,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     if (!('contents' in previousBlockInfo)) return this.notifications.sendError(`Previous block not found`);
     const jsonBlock = JSON.parse(previousBlockInfo.contents);
     const blockDataPrevious = {
-      account: jsonBlock.account.replace('xrb_', 'nano_').toLowerCase(),
+      account: jsonBlock.account.replace('xrb_', 'co2c_').toLowerCase(),
       previous: jsonBlock.previous,
       representative: jsonBlock.representative,
       balance: jsonBlock.balance,
