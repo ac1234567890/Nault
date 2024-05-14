@@ -3064,7 +3064,7 @@ select.uk-form-width-xsmall {
  */
 .uk-alert-warning {
   background: #fff6ee;
-  color: #faa05a;
+  color: #e778e3;
 }
 /*
  * Danger
@@ -3169,7 +3169,7 @@ select.uk-form-width-xsmall {
  * Warning
  */
 .uk-label-warning {
-  background-color: #faa05a;
+  background-color: #e778e3;
   color: #fff;
 }
 /*
@@ -4435,7 +4435,7 @@ select.uk-form-width-xsmall {
  * Warning
  */
 .uk-notification-message-warning {
-  color: #faa05a;
+  color: #e778e3;
 }
 /*
  * Danger
@@ -7244,7 +7244,7 @@ ul.uk-nav-sub {
   color: #32d296 !important;
 }
 .uk-text-warning {
-  color: #faa05a !important;
+  color: #e778e3 !important;
 }
 .uk-text-danger {
   color: #f0506e !important;

@@ -46,10 +46,10 @@
 }
 
 .representative-health-status.health-yellow {
-	color: #FAA05A;
+	color: #E778E3;
 }
 .representative-health-status.health-yellow > .health-icon {
-	background-color: #FAA05A;
+	background-color: #E778E3;
 }
 
 .representative-health-status.health-red {
