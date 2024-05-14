@@ -56,9 +56,9 @@ export class SendComponent implements OnInit {
   addressAliasMatch = '';
 
   amounts = [
-    { name: 'XNO', shortName: 'XNO', value: 'mnano' },
-    { name: 'knano', shortName: 'knano', value: 'knano' },
-    { name: 'nano', shortName: 'nano', value: 'nano' },
+    { name: 'CO2C', shortName: 'CO2C', value: 'mco2c' },
+    { name: 'kco2c', shortName: 'kco2c', value: 'kco2c' },
+    { name: 'co2c', shortName: 'co2c', value: 'co2c' },
   ];
   selectedAmount = this.amounts[0];
 
@@ -559,7 +559,7 @@ export class SendComponent implements OnInit {
       return this.notificationService.sendWarning(`From and to account are required`);
     }
     if (!this.validateAmount()) {
-      return this.notificationService.sendWarning(`Invalid XNO amount`);
+      return this.notificationService.sendWarning(`Invalid CO2C amount`);
     }
 
     this.preparingTransaction = true;
@@ -588,7 +588,7 @@ export class SendComponent implements OnInit {
       return this.notificationService.sendWarning(`Amount is invalid`);
     }
     if (from.balanceBN.minus(rawAmount).lessThan(0)) {
-      return this.notificationService.sendError(`From account does not have enough XNO`);
+      return this.notificationService.sendError(`From account does not have enough CO2C`);
     }
 
     // Determine a proper raw amount to show in the UI, if a decimal was entered

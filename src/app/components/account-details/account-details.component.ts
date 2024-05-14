@@ -81,9 +81,9 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
   showAddressBook = false;
   addressBookMatch = '';
   amounts = [
-    { name: 'XNO', shortName: 'XNO', value: 'mnano' },
-    { name: 'knano', shortName: 'knano', value: 'knano' },
-    { name: 'nano', shortName: 'nano', value: 'nano' },
+    { name: 'CO2C', shortName: 'CO2C', value: 'mco2c' },
+    { name: 'kco2c', shortName: 'kco2c', value: 'kco2c' },
+    { name: 'co2c', shortName: 'co2c', value: 'co2c' },
   ];
   selectedAmount = this.amounts[0];
 
@@ -998,7 +998,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     const isValid = this.util.account.isValidAccount(this.toAccountID);
     if (!isValid) return this.notifications.sendWarning(`To account address is not valid`);
     if (!this.accountID || !this.toAccountID) return this.notifications.sendWarning(`From and to account are required`);
-    if (!this.validateAmount()) return this.notifications.sendWarning(`Invalid XNO Amount`);
+    if (!this.validateAmount()) return this.notifications.sendWarning(`Invalid CO2C Amount`);
 
     this.qrCodeImageBlock = null;
 
@@ -1018,7 +1018,7 @@ export class AccountDetailsComponent implements OnInit, OnDestroy {
     const nanoAmount = this.rawAmount.div(this.nano);
 
     if (this.amount < 0 || rawAmount.lessThan(0)) return this.notifications.sendWarning(`Amount is invalid`);
-    if (from.balanceBN.minus(rawAmount).lessThan(0)) return this.notifications.sendError(`From account does not have enough XNO`);
+    if (from.balanceBN.minus(rawAmount).lessThan(0)) return this.notifications.sendError(`From account does not have enough CO2C`);
 
     // Determine a proper raw amount to show in the UI, if a decimal was entered
     this.amountRaw = this.rawAmount.mod(this.nano);

@@ -64,7 +64,7 @@
               <div class="form-account">
                 <select id="form-horizontal-select" class="uk-select" [(ngModel)]="pendingAccountModel" (change)="onSelectedAccountChange(pendingAccountModel)">
                   <option [value]="0">All Accounts</option>
-                  <option *ngFor="let account of accounts" [value]="account.id">{{account.addressBookName ? account.addressBookName + ' - ' : '#' + account.index + ' - ' }} {{ account.id | squeeze }} ({{ account.balance | rai: 'mnano,true' | amountsplit: 0 }}{{ account.balance | rai: 'mnano,true' | amountsplit: 1 }} XNO)</option>
+                  <option *ngFor="let account of accounts" [value]="account.id">{{account.addressBookName ? account.addressBookName + ' - ' : '#' + account.index + ' - ' }} {{ account.id | squeeze }} ({{ account.balance | rai: 'mnano,true' | amountsplit: 0 }}{{ account.balance | rai: 'mnano,true' | amountsplit: 1 }} CO2C)</option>
                 </select>
               </div>
             </div>
@@ -253,7 +253,7 @@
               <span class="uk-text-small">Ready to receive</span><br>
               <span class="amount-integer">{{ pending.amount | rai: 'mnano,true' | amountsplit: 0 }}</span>
               <span class="amount-fractional">{{ pending.amount | rai: 'mnano,true' | amountsplit: 1 }}</span>
-              <span class="currency-name">XNO</span>
+              <span class="currency-name">CO2C</span>
               <div class="compact-actions-date">
                 <ng-template [ngTemplateOutlet]="transactionActions"></ng-template>
               </div>
@@ -409,7 +409,7 @@
       <ng-container *ngIf="(inMerchantModeQR === true)">
         <p class="uk-text-large uk-margin-remove-bottom">Send</p>
         <p class="uk-text-large uk-text-primary uk-margin-remove-top" *ngIf="(amountNano === '')">
-          <span class="merchant-mode-currency-name">XNO</span>
+          <span class="merchant-mode-currency-name">CO2C</span>
         </p>
         <p class="uk-text-large uk-text-primary uk-margin-remove-top" *ngIf="(amountNano !== '')">
           <span
@@ -418,7 +418,7 @@
           <span
             class="merchant-mode-amount-fractional"
           >{{ merchantModeRawRequestedQR | rai: 'mnano,true' | amountsplit: 1 }}</span>
-          <span class="merchant-mode-currency-name merchant-mode-currency-margin">XNO</span>
+          <span class="merchant-mode-currency-name merchant-mode-currency-margin">CO2C</span>
         </p>
         <p class="text-half-muted" style="margin: -16px 0 10px 0;">to</p>
         <app-nano-account-id
@@ -467,7 +467,7 @@
               <span
                 class="merchant-mode-amount-fractional"
               >{{ prompt.amountRaw | rai: 'mnano,true' | amountsplit: 1 }}</span>
-              <span class="merchant-mode-currency-name merchant-mode-currency-margin">XNO</span>
+              <span class="merchant-mode-currency-name merchant-mode-currency-margin">CO2C</span>
             </p>
             <div
               *ngIf="prompt.amountHiddenRaw.gt(0)"
@@ -537,7 +537,7 @@
           <span
             class="merchant-mode-amount-fractional"
           >{{ merchantModeRawReceivedTotal | rai: 'mnano,true' | amountsplit: 1 }}</span>
-          <span class="merchant-mode-currency-name merchant-mode-currency-margin">XNO</span>
+          <span class="merchant-mode-currency-name merchant-mode-currency-margin">CO2C</span>
         </p>
         <div
           *ngIf="merchantModeRawReceivedTotalHiddenRaw.gt(0)"
@@ -556,12 +556,12 @@
                   'Amount Requested: '
                 + ( merchantModeRawRequestedTotal | rai: 'mnano,true' | amountsplit: 0 )
                 + ( merchantModeRawRequestedTotal | rai: 'mnano,true' | amountsplit: 1 )
-                + ' XNO'
+                + ' CO2C'
                 + '\n\n'
                 + 'Amount Paid: '
                 + ( merchantModeRawReceivedTotal | rai: 'mnano,true' | amountsplit: 0 )
                 + ( merchantModeRawReceivedTotal | rai: 'mnano,true' | amountsplit: 1 )
-                + ' XNO'
+                + ' CO2C'
                 + '\n\n'
                 + 'Transaction ID\'s:'
                 + '\n- '
