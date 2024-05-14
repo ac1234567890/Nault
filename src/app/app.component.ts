@@ -184,7 +184,7 @@ export class AppComponent implements OnInit {
     // Notify user after service worker was updated
     this.updates.activated.subscribe((event) => {
       console.log(`SW update successful. Current: ${event.current.hash}`);
-      this.notifications.sendSuccess('Nault was updated successfully.');
+      this.notifications.sendSuccess('Co2c wallet was updated successfully.');
     });
 
     // Check how long the wallet has been inactive, and lock it if it's been too long

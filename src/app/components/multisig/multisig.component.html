@@ -8,11 +8,11 @@
           <div class="uk-card-header uk-form-horizontal">
             <p><strong>Multi-signature approach allows to create addresses where multiple private keys are required to access and transfer the funds. Users can own a subset of private keys, and they are able to sign transactions only if they collectively own all of the participating keys.</strong>
             <br>
-            A full user guide is found <a href="https://docs.nault.cc/2021/04/20/multisig.html" target="_blank">here</a>.
+            A full user guide is found <a href="https://co2c.eco" target="_blank">here</a>.
             </p>
 
             <h4>1 - Create a Multisig Address</h4>
-            <p>Add 2 or more nano addresses to form a new multisig address.<br>
+            <p>Add 2 or more c02c addresses to form a new multisig address.<br>
             If you (or the participants) don't have any, they can be generated with the <a routerLink="/keygenerator" class="name">Keypair Generator</a> and stored safely.
             </p>
             <div>
@@ -62,7 +62,7 @@
                       <div *ngIf="showAddBox" class="uk-inline uk-width-1-1">
                         <a class="uk-form-icon uk-form-icon-flip second-icon" uk-icon="icon: plus" (click)="addAccount()" uk-tooltip title="Add address"></a>
                         <a class="uk-form-icon uk-form-icon-flip" uk-icon="icon: camera" (click)="openQR('accountAdd','account')" uk-tooltip title="Scan from QR code"></a>
-                        <input (input)="validateAccountAdd()" (keyup.enter)="addAccount()" [(ngModel)]="accountAdd" class="uk-input" [ngClass]="{ 'uk-form-danger': accountAddStatus === 0 }" type="text" placeholder="nano_1abc..." autocomplete="off" #accountAddFocus>
+                        <input (input)="validateAccountAdd()" (keyup.enter)="addAccount()" [(ngModel)]="accountAdd" class="uk-input" [ngClass]="{ 'uk-form-danger': accountAddStatus === 0 }" type="text" placeholder="co2c_1abc..." autocomplete="off" #accountAddFocus>
                       </div>
                     </li>
                   </ul>
@@ -122,7 +122,7 @@
                   <div class="uk-inline uk-width-1-1">
                     <a class="uk-form-icon uk-form-icon-flip" uk-icon="icon: camera" (click)="openQR('multisig','account')" uk-tooltip title="Scan from QR code"></a>
                     <a *ngIf="multisigAccount !== ''" class="uk-form-icon uk-form-icon-flip second-icon" ngxClipboard [cbContent]="multisigAccount" (cbOnSuccess)="copied()" uk-icon="icon: copy" title="Copy Account" uk-tooltip></a>
-                    <input (input)="validateMultisig()" (keyup.enter)="navigateAccount()" [(ngModel)]="multisigAccount" class="uk-input" [ngClass]="{ 'uk-form-success': multisigAccountStatus === 1, 'uk-form-danger': multisigAccountStatus === 0 }" type="text" placeholder="nano_1abc..." autocomplete="off">
+                    <input (input)="validateMultisig()" (keyup.enter)="navigateAccount()" [(ngModel)]="multisigAccount" class="uk-input" [ngClass]="{ 'uk-form-success': multisigAccountStatus === 1, 'uk-form-danger': multisigAccountStatus === 0 }" type="text" placeholder="co2c_1abc..." autocomplete="off">
                   </div>
                 </div>
               </div>
@@ -144,7 +144,7 @@
                 <label class="uk-form-label" for="form-horizontal-text2">Signing Data</label>
                 <div class="uk-form-controls">
                   <div class="uk-inline uk-width-1-1">
-                    <input (input)="validateUnsigned(unsignedBlock)" (keyup.enter)="navigateBlock(unsignedBlock)" [(ngModel)]="unsignedBlock" class="uk-input" [ngClass]="{ 'uk-form-success': unsignedStatus === 1, 'uk-form-danger': unsignedStatus === 0 }" type="text" placeholder="nanosign:{abc..}" autocomplete="off">
+                    <input (input)="validateUnsigned(unsignedBlock)" (keyup.enter)="navigateBlock(unsignedBlock)" [(ngModel)]="unsignedBlock" class="uk-input" [ngClass]="{ 'uk-form-success': unsignedStatus === 1, 'uk-form-danger': unsignedStatus === 0 }" type="text" placeholder="co2csign:{abc..}" autocomplete="off">
                   </div>
                 </div>
               </div>

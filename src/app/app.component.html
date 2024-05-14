@@ -6,7 +6,7 @@
       <div class="uk-width-1-2 button-column">
         <div class="nav-button" (click)="toggleNav()">
           <span uk-icon="icon: menu;"></span>
-          <span class="app-name">Nault</span>
+          <span class="app-name">Co2c wallet</span>
         </div>
       </div>
       <div class="uk-width-1-2" style="text-align: right;">
@@ -42,7 +42,7 @@
         </div>
         <div class="balance-column">
           <ng-container *ngIf="(walletService.wallet.updatingBalance === false) else balanceLoading">
-            <div class="balance primary">{{ wallet.balance | rai: 'mnano,true' | amountsplit: 0 }}{{ wallet.balance | rai: 'mnano,true' | amountsplit: 1 }} XNO</div>
+            <div class="balance primary">{{ wallet.balance | rai: 'mnano,true' | amountsplit: 0 }}{{ wallet.balance | rai: 'mnano,true' | amountsplit: 1 }} CO2C</div>
             <div class="balance converted">{{ wallet.balanceFiat | fiat: settings.settings.displayCurrency }}</div>
           </ng-container>
           <ng-template #balanceLoading>
@@ -300,6 +300,9 @@
           </div>
         </div>
         <div class="footer footer-attribution uk-margin-remove-top" uk-grid>
+          <div class="attribution uk-width-1-1 uk-text-center">
+            Based on <a href="https://github.com/cronoh/nanovault" target="_blank" rel="noopener noreferrer">NanoVault</a>
+          </div>
         </div>
 
 
